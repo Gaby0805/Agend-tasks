@@ -1,11 +1,21 @@
-import { Text, View } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
+// In App.js in a new project
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { createStaticNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/home';
+
+
+const RootStack = createNativeStackNavigator({
+  screenOptions: {headerShown: false},
+  screens: {
+    Home: Home,
+  },
+});
+
+const Navigation = createStaticNavigation(RootStack);
 
 export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">Hello NativeWind!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <Navigation />;
 }

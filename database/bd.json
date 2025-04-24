@@ -1,0 +1,21 @@
+{
+    "Tarefas":[
+        {
+            "id": 1,
+            "nome_tarefa": "Limpar cozinha",
+            "data_final": "24/05/2025",
+            "categoria": "Cozinha",
+            "status": "A realizar"
+        },
+        {
+            "id": 1,
+            "nome_tarefa": "Limpar cozinha",
+            "data_final": "24/05/2025",
+            "categoria": "Cozinha",
+            "status": "A realizar"
+        }
+
+    ]
+
+
+}
