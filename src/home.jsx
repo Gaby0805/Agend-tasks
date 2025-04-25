@@ -1,20 +1,39 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Header from './components/header';
-import Task from './components/tarefas';
 import { Icon } from 'react-native-elements'
+import Task from './components/tarefas';
+import tarefasJson from '../database/bd.json';
+import { ScrollView } from 'react-native-web';
+
 
 const App = () => {
 
-
-  return (
+    const tarefas = tarefasJson.Tarefas;
+    
+    return (
     <View className='flex-1 '>
     <Header/>
 
 
     
         <View className='Main  items-center flex-1'>
-        <Task/>
+
+            <View className='w-full h-5 flex justify-center items-center mt-8'>
+                <Text className='text-3xl'>Tarefas</Text>
+            </View>
+        <ScrollView className='w-11/12'>
+  {tarefas.map((items) => (
+    <Task
+      key={items.id}
+      nome={items.nome_tarefa}
+      Categoria={items.categoria}
+      Data={items.data_final}
+      Status={items.status}
+    />
+  ))}
+</ScrollView>
+        
 
         </View>
 
