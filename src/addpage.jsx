@@ -1,3 +1,4 @@
+import { Select, SelectItem } from '@ui-kitten/components';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Header from './components/header';
@@ -19,7 +20,14 @@ export default function Addpage() {
     
         <View className='Main  items-center flex-1'>
 
-
+        <Select 
+        className='flex-1'
+        placeholder={evaProps => <Text {...evaProps}>Selecione categoria</Text>}
+        label={evaProps => <Text {...evaProps}>Categoria</Text>}>
+        <SelectItem title={evaProps => <Text {...evaProps}>Option 1</Text>} />
+        <SelectItem title={evaProps => <Text {...evaProps}>Option 2</Text>} />
+        <SelectItem title={evaProps => <Text {...evaProps}>Option 3</Text>} />
+        </Select> 
 
         </View>
 
