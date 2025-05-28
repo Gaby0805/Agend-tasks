@@ -5,7 +5,6 @@ import { View, Text } from 'react-native';
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/home';
-import CreateTaks from './src/creationtask';
 
 
 const RootStack = createNativeStackNavigator({
@@ -13,7 +12,6 @@ const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
   screens: {
     Home: Home,
-    Create:CreateTaks
   },
 });
 
