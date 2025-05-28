@@ -54,4 +54,3 @@ export default function Task({nome, Status, Data, Categoria})  {
         
     )
 }
-
